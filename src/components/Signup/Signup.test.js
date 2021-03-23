@@ -1,11 +1,11 @@
 import React from "react";
-import Login from "./Login";
-import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
+import Signup from "./Signup";
+import { shallow } from "enzyme";
 
-describe(`Login component`, () => {
+describe(`Signup component`, () => {
   it("renders the component by default", () => {
-    const wrapper = shallow(<Login />);
+    const wrapper = shallow(<Signup />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

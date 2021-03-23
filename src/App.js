@@ -2,6 +2,7 @@ import { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 import LandingPage from "./components/LandingPage/LandingPage";
 
 class App extends Component {
@@ -29,6 +30,10 @@ class App extends Component {
         <Route
           path="/login"
           render={() => <Login handleAuthSubmit={this.handleAuthSubmit} />}
+        />
+        <Route
+          path="/signup"
+          render={() => <Signup handleAuthSubmit={this.handleAuthSubmit} />}
         />
       </BrowserRouter>
     );
