@@ -16,7 +16,15 @@ exports[`NavBar component renders the component by default 1`] = `
     <div
       className="logo"
     >
-      fbl
+      <Link
+        className="nav-links"
+        to="/"
+      >
+        <i
+          className="fas fa-layer-group"
+        />
+        My Learning Stack
+      </Link>
     </div>
     <div
       className="main-nav"
@@ -49,24 +57,5 @@ exports[`NavBar component renders the component by default 1`] = `
     </div>
   </nav>
    
-  <ul
-    className="colorful-border"
-  >
-    <li
-      className="colorful-border-blue"
-    />
-    <li
-      className="colorful-border-aqua"
-    />
-    <li
-      className="colorful-border-green"
-    />
-    <li
-      className="colorful-border-yellow"
-    />
-    <li
-      className="colorful-border-orange"
-    />
-  </ul>
 </Fragment>
 `;
