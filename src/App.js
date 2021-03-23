@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import Login from "./components/Login/Login";
 import LandingPage from "./components/LandingPage/LandingPage";
 
 class App extends Component {
@@ -25,7 +26,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <NavBar auth={auth} handleLogOut={this.handleLogOut}></NavBar>
-        <LandingPage></LandingPage>
+        <Route exact path="/" component={LandingPage} />
+        <Route
+          path="/login"
+          render={() => <Login handleAuthSubmit={this.handleAuthSubmit} />}
+        />
       </BrowserRouter>
     );
   }
