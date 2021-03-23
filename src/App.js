@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import LandingPage from "./components/LandingPage/LandingPage";
+import Profile from "./components/Profile/Profile";
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class App extends Component {
           path="/signup"
           render={() => <Signup handleAuthSubmit={this.handleAuthSubmit} />}
         />
+        <Route path="/profile" component={Profile} />
       </BrowserRouter>
     );
   }
