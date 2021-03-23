@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders the component by default 1`] = `
+<Fragment>
+  <nav
+    className="navbar"
+  >
+    <div
+      className="navbar-toggle"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-bars"
+      />
+    </div>
+    <div
+      className="logo"
+    >
+      fbl
+    </div>
+    <div
+      className="main-nav"
+    >
+      <Link
+        className="nav-links"
+        to="/signup"
+      >
+        Sign Up
+      </Link>
+      <br />
+      <Link
+        className="nav-links"
+        to={
+          Object {
+            "demo": true,
+            "pathname": "/login",
+          }
+        }
+      >
+        Demo
+      </Link>
+      <br />
+      <Link
+        className="nav-links"
+        to="/login"
+      >
+        Log in
+      </Link>
+    </div>
+  </nav>
+   
+  <ul
+    className="colorful-border"
+  >
+    <li
+      className="colorful-border-blue"
+    />
+    <li
+      className="colorful-border-aqua"
+    />
+    <li
+      className="colorful-border-green"
+    />
+    <li
+      className="colorful-border-yellow"
+    />
+    <li
+      className="colorful-border-orange"
+    />
+  </ul>
+</Fragment>
+`;
