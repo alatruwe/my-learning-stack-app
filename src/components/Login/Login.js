@@ -55,6 +55,7 @@ class Login extends Component {
     ev.preventDefault();
     this.setState({ error: null });
     this.props.history.push(`/dashboard`);
+    this.props.handleAuthSubmit();
   };
 
   renderDemo() {
