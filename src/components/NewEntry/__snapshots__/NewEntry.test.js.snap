@@ -112,7 +112,7 @@ exports[`NewEntry component renders the UI as expected 1`] = `
       >
         <button
           className="btn"
-          disabled="Please enter your mood and your tech"
+          disabled="Please enter at least your mood and your tech"
           type="submit"
         >
           Add entry
@@ -120,7 +120,7 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         <div
           className="error"
         >
-          Please enter your mood and your tech
+          Please enter at least your mood and your tech
         </div>
       </div>
     </form>

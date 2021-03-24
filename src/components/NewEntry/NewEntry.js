@@ -54,7 +54,7 @@ export default class NewEntry extends Component {
     const tech = this.state.tech;
 
     if (mood === "" || tech === "") {
-      return "Please enter your mood and your tech";
+      return "Please enter at least your mood and your tech";
     }
   };
 
