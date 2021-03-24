@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewEntry component renders the UI as expected 1`] = `
+<section
+  className="wrapper"
+>
+  <h1
+    className="form-title"
+  >
+    <span>
+      New Entry
+    </span>
+  </h1>
+  <div
+    className="form"
+  >
+    <form
+      className="form-details"
+      onSubmit={[Function]}
+    >
+      <div>
+        <div>
+          <button
+            className="btn"
+            id="smile"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="far fa-smile"
+            />
+          </button>
+          <button
+            className="btn"
+            id="meh"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="far fa-meh"
+            />
+          </button>
+          <button
+            className="btn"
+            id="frown"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="far fa-frown"
+            />
+          </button>
+        </div>
+        <div>
+          3-24-2021
+        </div>
+      </div>
+      <div>
+        <button
+          className="btn"
+          id="react"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fab fa-react"
+          />
+        </button>
+        <button
+          className="btn"
+          id="javascript"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fab fa-js"
+          />
+        </button>
+        <button
+          className="btn"
+          id="node.js"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fab fa-node-js"
+          />
+        </button>
+      </div>
+      <div>
+        <textarea
+          className="rounded-input"
+          id="learning-notes"
+          name="learning-notes"
+          onChange={[Function]}
+          placeholder="I learned..."
+          rows="5"
+          value=""
+        />
+        <textarea
+          className="rounded-input"
+          id="struggling-notes"
+          name="struggling-notes"
+          onChange={[Function]}
+          placeholder="I struggled with..."
+          rows="5"
+          value=""
+        />
+      </div>
+      <div
+        className="form-btn"
+      >
+        <button
+          className="btn"
+          disabled="Please enter your mood and your tech"
+          type="submit"
+        >
+          Add entry
+        </button>
+        <div
+          className="error"
+        >
+          Please enter your mood and your tech
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+`;

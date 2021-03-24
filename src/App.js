@@ -6,6 +6,7 @@ import Signup from "./components/Signup/Signup";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Profile from "./components/Profile/Profile";
 import EntryList from "./components/EntryList/EntryList";
+import NewEntry from "./components/NewEntry/NewEntry";
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends Component {
         />
         <Route path="/profile" component={Profile} />
         <Route path="/dashboard" component={EntryList} />
+        <Route path="/new-entry" component={NewEntry} />
       </BrowserRouter>
     );
   }
