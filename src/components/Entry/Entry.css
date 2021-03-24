@@ -1,0 +1,52 @@
+.vertical-border {
+  display: inline-block;
+  font-size: calc(5vw + 16px);
+  line-height: 0.9;
+  margin: 0 0.2em;
+  width: 1.5vw;
+  border-left: 0.2em solid rgba(0, 0, 0, 0);
+  background: linear-gradient(#fff, #fff) padding-box,
+    repeating-linear-gradient(
+        -65deg,
+        #f8f9fa 12.5vw,
+        #e9ecef 0 25vw,
+        #dee2e6 0 37.5vw,
+        #ced4da 0 50vw,
+        #adb5bd 0 62.5vw,
+        #6c757d 0 75vw,
+        #495057 0 87.5vw,
+        #343a40 0 100vw
+      )
+      border-box;
+  background-size: 200vw 100vh;
+  background-attachment: fixed;
+}
+
+.entry {
+  display: flex;
+  margin-bottom: 5%;
+}
+.vertical-border {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.entry-date-mood,
+.entry-tech,
+.entry-notes {
+  display: flex;
+}
+
+.entry-date-mood,
+.entry-notes {
+  justify-content: space-evenly;
+}
+.entry-tech {
+  justify-content: center;
+}
