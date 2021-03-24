@@ -1,13 +1,13 @@
 const Mood = {
   renderMood(mood) {
     if (mood === "smile") {
-      return <i class="far fa-smile"></i>;
+      return <i className="far fa-smile"></i>;
     }
     if (mood === "meh") {
-      return <i class="far fa-meh"></i>;
+      return <i className="far fa-meh"></i>;
     }
     if (mood === "frown") {
-      return <i class="far fa-frown"></i>;
+      return <i className="far fa-frown"></i>;
     }
   },
 };
