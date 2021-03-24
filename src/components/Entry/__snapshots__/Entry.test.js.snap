@@ -7,19 +7,44 @@ exports[`Entry component renders the component by default 1`] = `
   <div
     className="vertical-border"
   />
-  <div>
-    <p />
-    <p />
-    <p />
-    <p />
-    <p />
-  </div>
-  <button
-    className="btn"
-    onClick={[Function]}
-    type="button"
+  <div
+    className="entry-info"
   >
-    Delete
-  </button>
+    <div
+      onClick={[Function]}
+    >
+      <div
+        className="entry-date-mood"
+      >
+        <div />
+        <div />
+      </div>
+      <div
+        className="entry-tech"
+      >
+        <p />
+         
+      </div>
+    </div>
+    <div
+      className="entry-buttons"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        I learned
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        I struggled
+      </button>
+    </div>
+    <div
+      className="entry-notes"
+    />
+  </div>
 </section>
 `;

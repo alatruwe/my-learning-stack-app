@@ -1,4 +1,5 @@
 import React from "react";
+import Mood from "../../services/entry-mood.service";
 import "./Entry.css";
 
 class Entry extends React.Component {
@@ -16,19 +17,17 @@ class Entry extends React.Component {
     },
   };
 
+  // render notes when buttons are clicked
   resetState = () => {
     this.setState({ showLearningNotes: false, showStrugglingNotes: false });
   };
+
   showLearningNotes = () => {
     this.setState({ showLearningNotes: true, showStrugglingNotes: false });
   };
+
   showStrugglingNotes = () => {
     this.setState({ showLearningNotes: false, showStrugglingNotes: true });
-  };
-
-  // API call to delete data
-  handleDeleteEntry = (event) => {
-    event.preventDefault();
   };
 
   renderLearningNotes = () => {
@@ -41,6 +40,7 @@ class Entry extends React.Component {
       </div>
     );
   };
+
   renderStrugglingNotes = () => {
     return (
       <div>
@@ -52,6 +52,12 @@ class Entry extends React.Component {
     );
   };
 
+  // API call to delete data
+  handleDeleteEntry = (event) => {
+    event.preventDefault();
+    this.props.history.push(`/dashboard`);
+  };
+
   render() {
     return (
       <section className="entry">
@@ -59,8 +65,8 @@ class Entry extends React.Component {
         <div className="entry-info">
           <div onClick={this.resetState}>
             <div className="entry-date-mood">
-              <p>{this.props.date}</p>
-              <p>{/*this.renderMood(this.props.mood)*/}:-)</p>
+              <div>{this.props.date}</div>
+              <div>{Mood.renderMood(this.props.mood)}</div>
             </div>
             <div className="entry-tech">
               <p>{this.props.tech}</p>{" "}

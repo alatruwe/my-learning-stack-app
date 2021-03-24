@@ -22,7 +22,7 @@ export default [
   {
     id: 3,
     date: "3/6/21",
-    mood: "smile",
+    mood: "frown",
     tech: "React",
     learningNotes:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -42,7 +42,7 @@ export default [
   {
     id: 5,
     date: "3/4/21",
-    mood: "smile",
+    mood: "meh",
     tech: "Javascript",
     learningNotes:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
