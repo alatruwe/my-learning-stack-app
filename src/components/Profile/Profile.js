@@ -44,7 +44,7 @@ class Profile extends Component {
               <i className="fab fa-html5">HTML</i>
             </button>
             <button onClick={this.updateTech} type="button" className="btn">
-              <i class="fab fa-css3-alt">CSS</i>
+              <i className="fab fa-css3-alt">CSS</i>
             </button>
             <button onClick={this.updateTech} type="button" className="btn">
               <i className="fab fa-js">Javascript</i>
