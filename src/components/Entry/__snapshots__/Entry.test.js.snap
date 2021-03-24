@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry component renders the component by default 1`] = `
+<section
+  className="entry"
+>
+  <div
+    className="vertical-border"
+  />
+  <div>
+    <p />
+    <p />
+    <p />
+    <p />
+    <p />
+  </div>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</section>
+`;

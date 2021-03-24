@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryList component renders the UI as expected 1`] = `
+<section
+  className="wrapper"
+>
+  <ul
+    className="entry-list"
+  >
+    <li>
+      <section
+        className="entry"
+      >
+        <div
+          className="vertical-border"
+        />
+        <div>
+          <p>
+            3/8/21
+          </p>
+          <p />
+          <p>
+            React
+          </p>
+          <p>
+            bla bla bla
+          </p>
+          <p>
+            bla bla bla
+          </p>
+        </div>
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+        >
+          Delete
+        </button>
+      </section>
+    </li>
+  </ul>
+</section>
+`;

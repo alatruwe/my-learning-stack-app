@@ -5,6 +5,7 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Profile from "./components/Profile/Profile";
+import EntryList from "./components/EntryList/EntryList";
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends Component {
           render={() => <Signup handleAuthSubmit={this.handleAuthSubmit} />}
         />
         <Route path="/profile" component={Profile} />
+        <Route path="/dashboard" component={EntryList} />
       </BrowserRouter>
     );
   }
