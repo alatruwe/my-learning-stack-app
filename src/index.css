@@ -24,3 +24,16 @@ code {
 .entry-list li {
   list-style-type: none;
 }
+
+/* forms */
+.form {
+  display: flex;
+}
+.form-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-btn {
+  text-align: center;
+}
