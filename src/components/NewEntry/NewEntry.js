@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ValidationError from "../ValidationError/ValidationError.js";
+import "./NewEntry.css";
 
 export default class NewEntry extends Component {
   constructor(props) {
@@ -54,7 +55,7 @@ export default class NewEntry extends Component {
     const tech = this.state.tech;
 
     if (mood === "" || tech === "") {
-      return "Please enter at least your mood and your tech";
+      return "Please enter at least your mood and your focus";
     }
   };
 
@@ -75,8 +76,9 @@ export default class NewEntry extends Component {
         </h1>
         <div className="form">
           <form className="form-details" onSubmit={this.handleSubmit}>
-            <div>
+            <div className="mood-date">
               <div>
+                <p>I feel: </p>
                 <button
                   onClick={(e) => this.updateMood(e.currentTarget.id)}
                   type="button"
@@ -104,7 +106,8 @@ export default class NewEntry extends Component {
               </div>
               <div>{this.state.date}</div>
             </div>
-            <div>
+            <div className="tech-button">
+              <p>I focused on:</p>
               <button
                 onClick={(e) => this.updateTech(e.currentTarget.id)}
                 type="button"
@@ -130,7 +133,8 @@ export default class NewEntry extends Component {
                 <i className="fab fa-node-js"></i>
               </button>
             </div>
-            <div>
+            <div className="notes">
+              <p>Notes:</p>
               <textarea
                 id="learning-notes"
                 name="learning-notes"
