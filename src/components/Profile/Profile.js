@@ -23,7 +23,7 @@ class Profile extends Component {
       this.state.tech2 === "" &&
       this.state.tech3 === ""
     ) {
-      return "Please chose at least 1 tech you work with";
+      return "Please enter at least 1 tech you work with";
     }
   };
 
@@ -39,6 +39,7 @@ class Profile extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
+    // check is tech is empty
     this.props.history.push(`/dashboard`);
   };
 

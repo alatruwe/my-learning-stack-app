@@ -114,7 +114,7 @@ export default class NewEntry extends Component {
                 id={this.state.profile.tech1}
                 className="btn"
               >
-                <i className="fab fa-react"></i>
+                <i className="fab fa-react">React</i>
               </button>
               <button
                 onClick={(e) => this.updateTech(e.currentTarget.id)}
@@ -122,7 +122,7 @@ export default class NewEntry extends Component {
                 id={this.state.profile.tech2}
                 className="btn"
               >
-                <i className="fab fa-js"></i>
+                <i className="fab fa-js">Javascript</i>
               </button>
               <button
                 onClick={(e) => this.updateTech(e.currentTarget.id)}
@@ -130,7 +130,7 @@ export default class NewEntry extends Component {
                 id={this.state.profile.tech3}
                 className="btn"
               >
-                <i className="fab fa-node-js"></i>
+                <i className="fab fa-node-js">Node.js</i>
               </button>
             </div>
             <div className="notes">
