@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import AuthApiService from "../../services/auth-api-services";
+import TokenService from "../../services/token-services";
 import ValidationError from "../ValidationError/ValidationError.js";
 
 class Login extends Component {
@@ -54,14 +56,28 @@ class Login extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     this.setState({ error: null });
-    this.props.history.push(`/dashboard`);
-    this.props.handleAuthSubmit();
+    const { email, password } = ev.target;
+
+    AuthApiService.postLogin({
+      email: email.value,
+      user_password: password.value,
+    })
+      .then((res) => {
+        email.value = "";
+        password.value = "";
+        TokenService.saveAuthToken(res.authToken);
+        this.props.history.push(`/dashboard`);
+        this.props.handleAuthSubmit();
+      })
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
   };
 
   renderDemo() {
     return (
       <div>
-        <p className="demo">Demo email: bill@email.com</p>
+        <p className="demo">Demo email: ted@email.com</p>
         <p className="demo">Demo password: 22AAaa@@</p>
       </div>
     );
