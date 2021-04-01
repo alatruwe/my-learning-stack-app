@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EntriesApiService from "../../services/entries-api-services";
 import ValidationError from "../ValidationError/ValidationError.js";
 import "./NewEntry.css";
 
@@ -64,7 +65,39 @@ export default class NewEntry extends Component {
   // handle submit
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.history.push(`/dashboard`);
+    // get media info
+    const tech = this.state.tech;
+    const current_mood = this.state.mood;
+    const learning_notes = this.state.learningNotes;
+    const struggling_notes = this.state.strugglingNotes;
+    let entry = {
+      tech_id: tech,
+      current_mood: current_mood,
+      learning_notes: learning_notes,
+      struggling_notes: struggling_notes,
+    };
+    console.log(entry);
+    // API POST request
+    EntriesApiService.postEntry(entry)
+      // reset form fields
+      .then(() => {
+        e.target.learning_notes.value = "";
+        e.target.struggling_notes.value = "";
+      })
+      // change state
+      .then(() => {
+        this.setState({
+          mood: "",
+          tech: "",
+          learning_notes: "",
+          struggling_notes: "",
+          error: null,
+        });
+        this.props.history.push(`/dashboard`);
+      })
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
   };
 
   render() {
@@ -136,8 +169,8 @@ export default class NewEntry extends Component {
             <div className="notes">
               <p>Notes:</p>
               <textarea
-                id="learning-notes"
-                name="learning-notes"
+                id="learning_notes"
+                name="learning_notes"
                 placeholder="I learned..."
                 className="rounded-input"
                 rows="5"
@@ -145,8 +178,8 @@ export default class NewEntry extends Component {
                 onChange={(e) => this.updateLearningNotes(e.target.value)}
               />
               <textarea
-                id="struggling-notes"
-                name="struggling-notes"
+                id="struggling_notes"
+                name="struggling_notes"
                 placeholder="I struggled with..."
                 className="rounded-input"
                 rows="5"

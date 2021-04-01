@@ -113,7 +113,7 @@ class Signup extends Component {
         email.value = "";
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
-        this.props.history.push(`/profile`);
+        this.props.history.push(`/dashboard`);
         this.props.handleAuthSubmit();
       })
       .catch((res) => {
