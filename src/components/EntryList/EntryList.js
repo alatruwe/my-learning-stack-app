@@ -1,9 +1,9 @@
 import React from "react";
-import entries from "../../entries.js";
 import Entry from "../Entry/Entry.js";
 import EntriesApiService from "../../services/entries-api-services";
+import { format, parseISO } from "date-fns";
 
-export default class ItemList extends React.Component {
+export default class EntryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ export default class ItemList extends React.Component {
           {entries.map((entry) => (
             <li key={entry.id}>
               <Entry
-                date={entry.date}
+                date={format(parseISO(entry.date), "L-d- yyyy")}
                 mood={entry.mood}
                 id={entry.id}
                 tech={entry.tech}
