@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import ProfileApiService from "../../services/profile-api-services";
 import ValidationError from "../ValidationError/ValidationError.js";
 
 class Profile extends Component {
@@ -9,6 +10,7 @@ class Profile extends Component {
       tech1: "",
       tech2: "",
       tech3: "",
+      error: null,
     };
   }
   static defaultProps = {
@@ -39,8 +41,38 @@ class Profile extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    // check is tech is empty
-    this.props.history.push(`/dashboard`);
+
+    // get profile info
+    const tech1 = this.state.tech1;
+    const tech2 = this.state.tech2;
+    const tech3 = this.state.tech3;
+    let techs = {
+      tech1: tech1,
+      tech2: tech2,
+      tech3: tech3,
+    };
+
+    // API POST request
+    ProfileApiService.postProfile(techs)
+      // reset form fields
+      .then(() => {
+        ev.target.tech1.value = "";
+        ev.target.tech2.value = "";
+        ev.target.tech3.value = "";
+      })
+      // change state
+      .then(() => {
+        this.setState({
+          tech1: "",
+          tech2: "",
+          tech3: "",
+          error: null,
+        });
+        this.props.history.push(`/dashboard`);
+      })
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
   };
 
   render() {
