@@ -1,12 +1,13 @@
 import React from "react";
 import entries from "../../entries.js";
 import Entry from "../Entry/Entry.js";
+import EntriesApiService from "../../services/entries-api-services";
 
 export default class ItemList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
+      entries: [],
       touched: false,
     };
   }
@@ -17,8 +18,14 @@ export default class ItemList extends React.Component {
   };
 
   // API call here to get data
+  componentDidMount() {
+    EntriesApiService.getEntries().then((res) => {
+      this.setState({ entries: res });
+    });
+  }
 
   render() {
+    const entries = this.state.entries;
     return (
       <section className="wrapper">
         <ul className="entry-list">
