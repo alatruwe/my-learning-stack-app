@@ -9,6 +9,7 @@ export default class EntryList extends React.Component {
     this.state = {
       entries: [],
       touched: false,
+      deleted: false,
     };
   }
   static defaultProps = {
@@ -24,6 +25,16 @@ export default class EntryList extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    EntriesApiService.getEntries().then((res) => {
+      this.setState({ entries: res });
+    });
+  }
+
+  handleDeleteEntry = (id) => {
+    this.setState({ deleted: true });
+  };
+
   render() {
     const entries = this.state.entries;
     return (
@@ -32,10 +43,11 @@ export default class EntryList extends React.Component {
           {entries.map((entry) => (
             <li key={entry.id}>
               <Entry
+                handleDeleteEntry={this.handleDeleteEntry}
                 date={format(parseISO(entry.date), "L-d- yyyy")}
-                mood={entry.mood}
+                mood={entry.current_mood}
                 id={entry.id}
-                tech={entry.tech}
+                tech={entry.tech_id}
                 learningNotes={entry.learningNotes}
                 strugglingNotes={entry.strugglingNotes}
               />

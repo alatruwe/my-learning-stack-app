@@ -1,5 +1,6 @@
 import React from "react";
 import Mood from "../../services/entry-mood.service";
+import EntriesApiService from "../../services/entries-api-services";
 import "./Entry.css";
 
 class Entry extends React.Component {
@@ -8,10 +9,10 @@ class Entry extends React.Component {
     this.state = {
       showLearningNotes: false,
       showStrugglingNotes: false,
-      deleted: false,
     };
   }
   static defaultProps = {
+    handleDeleteEntry: () => {},
     history: {
       push: () => {},
     },
@@ -53,9 +54,12 @@ class Entry extends React.Component {
   };
 
   // API call to delete data
-  handleDeleteEntry = (event) => {
-    event.preventDefault();
-    this.props.history.push(`/dashboard`);
+  handleDeleteEntry = () => {
+    const id = this.props.id;
+    EntriesApiService.deleteEntry(id).then(() => {
+      this.setState({ deleted: true });
+      this.props.handleDeleteEntry(id);
+    });
   };
 
   render() {

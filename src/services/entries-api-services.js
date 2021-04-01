@@ -25,6 +25,17 @@ const EntriesApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
+
+  deleteEntry(id) {
+    return fetch(`${config.API_ENDPOINT}/dashboard/entry/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.end
+    );
+  },
 };
 
 export default EntriesApiService;
