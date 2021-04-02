@@ -5,9 +5,3 @@ exports[`Login component renders the component by default 1`] = `
   <Component />
 </ContextConsumer>
 `;
-
-exports[`LoginForm component renders the component by default 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;

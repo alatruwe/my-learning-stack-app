@@ -18,8 +18,13 @@ exports[`NewEntry component renders the UI as expected 1`] = `
       className="form-details"
       onSubmit={[Function]}
     >
-      <div>
+      <div
+        className="mood-date"
+      >
         <div>
+          <p>
+            I feel: 
+          </p>
           <button
             className="btn"
             id="smile"
@@ -52,10 +57,15 @@ exports[`NewEntry component renders the UI as expected 1`] = `
           </button>
         </div>
         <div>
-          3-24-2021
+          4-1-2021
         </div>
       </div>
-      <div>
+      <div
+        className="tech-button"
+      >
+        <p>
+          I focused on:
+        </p>
         <button
           className="btn"
           id="react"
@@ -64,7 +74,9 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         >
           <i
             className="fab fa-react"
-          />
+          >
+            React
+          </i>
         </button>
         <button
           className="btn"
@@ -74,7 +86,9 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         >
           <i
             className="fab fa-js"
-          />
+          >
+            Javascript
+          </i>
         </button>
         <button
           className="btn"
@@ -84,14 +98,21 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         >
           <i
             className="fab fa-node-js"
-          />
+          >
+            Node.js
+          </i>
         </button>
       </div>
-      <div>
+      <div
+        className="notes"
+      >
+        <p>
+          Notes:
+        </p>
         <textarea
           className="rounded-input"
-          id="learning-notes"
-          name="learning-notes"
+          id="learning_notes"
+          name="learning_notes"
           onChange={[Function]}
           placeholder="I learned..."
           rows="5"
@@ -99,8 +120,8 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         />
         <textarea
           className="rounded-input"
-          id="struggling-notes"
-          name="struggling-notes"
+          id="struggling_notes"
+          name="struggling_notes"
           onChange={[Function]}
           placeholder="I struggled with..."
           rows="5"
@@ -112,7 +133,7 @@ exports[`NewEntry component renders the UI as expected 1`] = `
       >
         <button
           className="btn"
-          disabled="Please enter at least your mood and your tech"
+          disabled="Please enter at least your mood and your focus"
           type="submit"
         >
           Add entry
@@ -120,7 +141,7 @@ exports[`NewEntry component renders the UI as expected 1`] = `
         <div
           className="error"
         >
-          Please enter at least your mood and your tech
+          Please enter at least your mood and your focus
         </div>
       </div>
     </form>
