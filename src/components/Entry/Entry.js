@@ -34,7 +34,7 @@ class Entry extends React.Component {
   renderLearningNotes = () => {
     return (
       <div>
-        {this.props.learningNotes}
+        <p>{this.props.learningNotes}</p>
         <button className="btn" type="button" onClick={this.handleDeleteEntry}>
           Delete
         </button>
@@ -57,7 +57,6 @@ class Entry extends React.Component {
   handleDeleteEntry = () => {
     const id = this.props.id;
     EntriesApiService.deleteEntry(id).then(() => {
-      this.setState({ deleted: true });
       this.props.handleDeleteEntry(id);
     });
   };
@@ -93,7 +92,6 @@ class Entry extends React.Component {
               <></>
             )}
           </div>
-          {this.state.deleted && <p>Deleted!</p>}
         </div>
       </section>
     );

@@ -76,7 +76,6 @@ export default class NewEntry extends Component {
       learning_notes: learning_notes,
       struggling_notes: struggling_notes,
     };
-    console.log(entry);
     // API POST request
     EntriesApiService.postEntry(entry)
       // reset form fields
@@ -89,8 +88,8 @@ export default class NewEntry extends Component {
         this.setState({
           mood: "",
           tech: "",
-          learning_notes: "",
-          struggling_notes: "",
+          learningNotes: "",
+          strugglingNotes: "",
           error: null,
         });
         this.props.history.push(`/dashboard`);
