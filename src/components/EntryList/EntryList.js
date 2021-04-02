@@ -47,9 +47,9 @@ export default class EntryList extends React.Component {
                 date={format(parseISO(entry.date), "L-d- yyyy")}
                 mood={entry.current_mood}
                 id={entry.id}
-                tech={entry.tech_id}
-                learningNotes={entry.learningNotes}
-                strugglingNotes={entry.strugglingNotes}
+                tech={entry.name}
+                learningNotes={entry.learning_notes}
+                strugglingNotes={entry.struggling_notes}
               />
             </li>
           ))}
