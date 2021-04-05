@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import EntriesApiService from "../../services/entries-api-services";
+import ProfileApiService from "../../services/profile-api-services";
 import ValidationError from "../ValidationError/ValidationError.js";
+import Tech from "../Tech/Tech.js";
 import "./NewEntry.css";
 
 export default class NewEntry extends Component {
@@ -15,11 +17,7 @@ export default class NewEntry extends Component {
         "-" +
         today.getFullYear();
     this.state = {
-      profile: {
-        tech1: "react",
-        tech2: "javascript",
-        tech3: "node.js",
-      },
+      techs: [],
       date: date,
       mood: "",
       tech: "",
@@ -42,8 +40,8 @@ export default class NewEntry extends Component {
     this.setState({ strugglingNotes: notes });
   };
 
-  updateTech = (id) => {
-    this.setState({ tech: id });
+  updateTech = (name) => {
+    this.setState({ tech: name });
   };
 
   updateMood = (id) => {
@@ -61,6 +59,11 @@ export default class NewEntry extends Component {
   };
 
   // get profile to display correct tech
+  componentDidMount() {
+    ProfileApiService.getProfile().then((res) => {
+      this.setState({ techs: res });
+    });
+  }
 
   // handle submit
   handleSubmit = (e) => {
@@ -100,6 +103,7 @@ export default class NewEntry extends Component {
   };
 
   render() {
+    const techs = this.state.techs;
     const entryError = this.validateEntry();
     return (
       <section className="wrapper">
@@ -140,30 +144,17 @@ export default class NewEntry extends Component {
             </div>
             <div className="tech-button">
               <p>I focused on:</p>
-              <button
-                onClick={(e) => this.updateTech(e.currentTarget.id)}
-                type="button"
-                id={this.state.profile.tech1}
-                className="btn"
-              >
-                <i className="fab fa-react">React</i>
-              </button>
-              <button
-                onClick={(e) => this.updateTech(e.currentTarget.id)}
-                type="button"
-                id={this.state.profile.tech2}
-                className="btn"
-              >
-                <i className="fab fa-js">Javascript</i>
-              </button>
-              <button
-                onClick={(e) => this.updateTech(e.currentTarget.id)}
-                type="button"
-                id={this.state.profile.tech3}
-                className="btn"
-              >
-                <i className="fab fa-node-js">Node.js</i>
-              </button>
+              <ul className="profile-list">
+                {techs.map((tech) => (
+                  <li key={tech.id}>
+                    <Tech
+                      id={tech.name}
+                      tech={tech.name}
+                      updateTech={this.updateTech}
+                    />
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="notes">
               <p>Notes:</p>
