@@ -2,7 +2,6 @@
   display: inline-block;
   font-size: calc(5vw + 16px);
   line-height: 0.9;
-  margin: 0 0.2em;
   width: 1.5vw;
   border-left: 0.2em solid rgba(0, 0, 0, 0);
   background: linear-gradient(#fff, #fff) padding-box,
@@ -25,6 +24,26 @@
 .entry {
   display: flex;
   margin-bottom: 10%;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #adb5bd 0, #343a40);
+}
+.entry:hover {
+  transform: scale(1.04);
+}
+.entry-buttons {
+  display: flex;
+}
+.rounded-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.active-button {
+  background: linear-gradient(180deg, #a79ee5 0, #2d227c);
 }
 .vertical-border {
   display: flex;

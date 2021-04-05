@@ -7,7 +7,8 @@ class Entry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showLearningNotes: false,
+      showDetails: false,
+      showLearningNotes: true,
       showStrugglingNotes: false,
     };
   }
@@ -18,9 +19,12 @@ class Entry extends React.Component {
     },
   };
 
-  // render notes when buttons are clicked
-  resetState = () => {
-    this.setState({ showLearningNotes: false, showStrugglingNotes: false });
+  showDetails = () => {
+    if (this.state.showDetails) {
+      this.setState({ showDetails: false });
+    } else {
+      this.setState({ showDetails: true });
+    }
   };
 
   showLearningNotes = () => {
@@ -31,26 +35,50 @@ class Entry extends React.Component {
     this.setState({ showLearningNotes: false, showStrugglingNotes: true });
   };
 
-  renderLearningNotes = () => {
+  renderDetails = () => {
     return (
-      <div>
-        <p>{this.props.learningNotes}</p>
-        <button className="btn" type="button" onClick={this.handleDeleteEntry}>
-          Delete
-        </button>
-      </div>
+      <>
+        <div className="entry-buttons">
+          <button
+            type="button"
+            onClick={this.showLearningNotes}
+            className={this.state.showLearningNotes ? "active-button" : ""}
+          >
+            I learned
+          </button>
+          <button
+            type="button"
+            className={this.state.showStrugglingNotes ? "active-button" : ""}
+            onClick={this.showStrugglingNotes}
+          >
+            I struggled
+          </button>
+          <button
+            className="btn"
+            type="button"
+            onClick={this.handleDeleteEntry}
+          >
+            Delete
+          </button>
+        </div>
+        <div className="entry-notes">
+          {this.state.showLearningNotes ? this.renderLearningNotes() : <></>}
+          {this.state.showStrugglingNotes ? (
+            this.renderStrugglingNotes()
+          ) : (
+            <></>
+          )}
+        </div>
+      </>
     );
   };
 
+  renderLearningNotes = () => {
+    return <p>{this.props.learningNotes}</p>;
+  };
+
   renderStrugglingNotes = () => {
-    return (
-      <div>
-        {this.props.strugglingNotes}
-        <button className="btn" type="button" onClick={this.handleDeleteEntry}>
-          Delete
-        </button>
-      </div>
-    );
+    return <p>{this.props.strugglingNotes}</p>;
   };
 
   // API call to delete data
@@ -66,7 +94,7 @@ class Entry extends React.Component {
       <section className="entry">
         <div className="vertical-border"></div>
         <div className="entry-info">
-          <div onClick={this.resetState}>
+          <div onClick={this.showDetails}>
             <div className="entry-date-mood">
               <div>{this.props.date}</div>
               <div>{Mood.renderMood(this.props.mood)}</div>
@@ -75,23 +103,7 @@ class Entry extends React.Component {
               <p>{this.props.tech}</p>{" "}
             </div>
           </div>
-
-          <div className="entry-buttons">
-            <button type="button" onClick={this.showLearningNotes}>
-              I learned
-            </button>
-            <button type="button" onClick={this.showStrugglingNotes}>
-              I struggled
-            </button>
-          </div>
-          <div className="entry-notes">
-            {this.state.showLearningNotes ? this.renderLearningNotes() : <></>}
-            {this.state.showStrugglingNotes ? (
-              this.renderStrugglingNotes()
-            ) : (
-              <></>
-            )}
-          </div>
+          <div>{this.state.showDetails ? this.renderDetails() : <></>}</div>
         </div>
       </section>
     );
