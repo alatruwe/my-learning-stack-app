@@ -31,7 +31,7 @@ export default class EntryList extends React.Component {
     });
   }
 
-  handleDeleteEntry = (id) => {
+  handleDeleteEntry = () => {
     this.setState({ deleted: true });
   };
 
