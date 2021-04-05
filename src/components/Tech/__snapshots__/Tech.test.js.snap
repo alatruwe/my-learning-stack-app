@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tch component renders the UI as expected 1`] = `
+<button
+  className="btn"
+  onClick={[Function]}
+  type="button"
+/>
+`;
