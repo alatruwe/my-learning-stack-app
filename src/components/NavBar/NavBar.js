@@ -29,6 +29,10 @@ class NavBar extends Component {
           New entry
         </Link>
         <br />
+        <Link to="/profile" className="nav-links">
+          Profile
+        </Link>
+        <br />
         <Link onClick={this.props.handleLogOut} to="/" className="nav-links">
           Logout
         </Link>
@@ -70,7 +74,7 @@ class NavBar extends Component {
           </div>
           <div className="logo">
             <Link to="/" className="nav-links">
-              <i className="fas fa-layer-group"></i>My Learning Stack
+              <i className="fas fa-layer-group"></i>My Learning Journey
             </Link>
           </div>
           {this.props.auth ? this.renderLogoutNav() : this.renderLoginNav()}

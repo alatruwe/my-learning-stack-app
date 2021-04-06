@@ -23,7 +23,7 @@ exports[`NavBar component renders the component by default 1`] = `
         <i
           className="fas fa-layer-group"
         />
-        My Learning Stack
+        My Learning Journey
       </Link>
     </div>
     <div

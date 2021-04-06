@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Tech from "../Tech/Tech";
 import ProfileApiService from "../../services/profile-api-services";
 import ValidationError from "../ValidationError/ValidationError.js";
 
@@ -7,6 +8,7 @@ class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      techs: [],
       tech1: "",
       tech2: "",
       tech3: "",
@@ -25,7 +27,7 @@ class Profile extends Component {
       this.state.tech2 === "" &&
       this.state.tech3 === ""
     ) {
-      return "Please enter at least 1 tech you work with";
+      return "Please enter at least 1 tech to update";
     }
   };
 
@@ -39,6 +41,14 @@ class Profile extends Component {
     this.setState({ tech3: tech });
   };
 
+  // get profile to display correct tech
+  componentDidMount() {
+    ProfileApiService.getProfile().then((res) => {
+      this.setState({ techs: res });
+    });
+  }
+
+  // update profile
   handleSubmit = (ev) => {
     ev.preventDefault();
 
@@ -76,6 +86,7 @@ class Profile extends Component {
   };
 
   render() {
+    const techs = this.state.techs;
     const techError = this.validateTech();
     return (
       <section className="wrapper">
@@ -83,8 +94,18 @@ class Profile extends Component {
           <span>My Profile</span>
         </h1>
 
-        <div className="form">
+        <div>
           <p>I work with:</p>
+          <ul className="profile-list">
+            {techs.map((tech) => (
+              <li key={tech.id}>
+                <Tech id={tech.name} tech={tech.name} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="form">
+          <p>Update:</p>
           <form className="form-details" onSubmit={this.handleSubmit}>
             <input
               type="text"
