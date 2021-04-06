@@ -78,7 +78,11 @@ class Profile extends Component {
           tech3: "",
           error: null,
         });
-        this.props.history.push(`/dashboard`);
+        if (this.state.techs.length === 0) {
+          this.props.history.push(`/new-entry`);
+        } else {
+          this.props.history.push(`/dashboard`);
+        }
       })
       .catch((res) => {
         this.setState({ error: res.error });
