@@ -74,7 +74,7 @@ class NavBar extends Component {
           </div>
           <div className="logo">
             <Link to="/" className="nav-links">
-              <i className="fas fa-layer-group"></i>My Learning Journey
+              <i className="fas fa-layer-group"></i>My Learning Stack
             </Link>
           </div>
           {this.props.auth ? this.renderLogoutNav() : this.renderLoginNav()}
