@@ -36,14 +36,28 @@ body {
 
 .wrapper {
   margin: auto;
-  width: 65%;
+  width: 80%;
   padding-top: 55%;
+  padding-bottom: 10%;
 }
 
 .card {
   box-shadow: 2rem 0 3rem -2rem #000;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 15% 15% 15% 15%;
+}
+
+.card-title,
+.form-title {
+  font-size: calc(7vw + 5px);
+  padding-bottom: 20%;
+}
+
+.card-text {
+  font-size: calc(5vw + 5px);
+  padding-bottom: 10%;
+  text-align: left;
 }
 
 /* text and titles styling */
@@ -77,6 +91,9 @@ p {
 .form {
   display: flex;
 }
+.form-title {
+  text-align: center;
+}
 .form-details {
   display: flex;
   flex-direction: column;
@@ -84,6 +101,7 @@ p {
 }
 .form-btn {
   text-align: center;
+  padding-top: 10%;
 }
 
 /* buttons */
@@ -92,19 +110,25 @@ p {
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
+  font-size: calc(1rem + 2vw);
 }
 .btn {
   width: auto;
-  background: transparent;
   border: none;
-  font-size: 18px;
+  font-size: calc(1rem + 2vw);
+  padding: 0.5em 1.5em;
+  background-image: linear-gradient(-45deg, #b3bfc6 0%, #ced4da 100%);
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 10em;
+  color: #203a43;
 }
 .btn:after {
   content: "";
   display: block;
   width: 0%;
   padding-top: 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ced4da;
   transition: 0.5s;
 }
 .btn:hover:after,
