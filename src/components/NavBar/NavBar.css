@@ -5,9 +5,7 @@
 .logo {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-}
-.nav-links:visited {
-  color: black;
+  color: #ced4da;
 }
 
 .main-nav {
