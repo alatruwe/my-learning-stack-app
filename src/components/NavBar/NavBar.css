@@ -1,5 +1,9 @@
 .navbar {
   font-size: calc(5vw + 5px);
+  position: absolute;
+  right: 22px;
+  width: 100%;
+  display: flex;
 }
 .nav-links,
 .logo {
@@ -32,8 +36,11 @@
 
 .active {
   display: block;
-  text-align: center;
+  text-align: right;
   line-height: 35px;
+  position: absolute;
+  right: 22px;
+  top: 48px;
 }
 
 ul {
