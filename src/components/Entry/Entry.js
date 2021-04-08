@@ -92,7 +92,6 @@ class Entry extends React.Component {
   render() {
     return (
       <section className="entry">
-        <div className="vertical-border"></div>
         <div className="entry-info">
           <div onClick={this.showDetails}>
             <div className="entry-date-mood">
