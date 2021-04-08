@@ -11,21 +11,20 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: linear-gradient(
-    to right top,
-    #484d73,
-    #555a81,
-    #62678f,
-    #6f759d,
-    #7d83ab,
-    #757ea3,
-    #6e7a9b,
-    #687593,
-    #4f5d73,
-    #394654,
-    #262f38,
-    #161a1d
-  );
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #ced4da;
 }
 
@@ -38,10 +37,13 @@ body {
 .wrapper {
   margin: auto;
   width: 65%;
+  padding-top: 55%;
 }
 
-section {
-  padding: 30px 0px;
+.card {
+  box-shadow: 2rem 0 3rem -2rem #000;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* text and titles styling */
