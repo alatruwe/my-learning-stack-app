@@ -25,14 +25,11 @@ export default class EntryList extends React.Component {
     });
   }
 
-  componentDidUpdate() {
+  handleDeleteEntry = () => {
+    this.setState({ deleted: true });
     EntriesApiService.getEntries().then((res) => {
       this.setState({ entries: res });
     });
-  }
-
-  handleDeleteEntry = () => {
-    this.setState({ deleted: true });
   };
 
   render() {
