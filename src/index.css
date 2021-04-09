@@ -60,19 +60,13 @@ body {
   text-align: left;
 }
 
-/* text and titles styling */
+/* text styling */
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: calc(5vw + 16px);
   text-align: center;
 }
-h2 {
-  font-size: calc(5vw + 5px);
-  font-family: "Montserrat", sans-serif;
-}
-h3 {
-  font-size: calc(5vw + 16px);
-}
+
 p {
   line-height: 1.5;
   padding: 3% 0;
