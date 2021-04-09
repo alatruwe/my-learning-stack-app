@@ -73,7 +73,7 @@ class NavBar extends Component {
             <i className="fas fa-bars"></i>
           </div>
           <div className="logo">
-            <Link to="/" className="nav-links">
+            <Link to="/" className="nav-links-logo">
               &#123; My Learning Stack &#125;
             </Link>
           </div>
