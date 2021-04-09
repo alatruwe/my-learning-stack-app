@@ -112,26 +112,29 @@ p {
   margin: 10px 0;
   font-size: calc(1rem + 2vw);
 }
+
 .btn {
   width: auto;
-  border: none;
+  padding: 0.2em 0.5em;
   font-size: calc(1rem + 2vw);
-  padding: 0.5em 1.5em;
-  background-image: linear-gradient(-45deg, #b3bfc6 0%, #ced4da 100%);
   text-decoration: none;
   font-weight: 900;
-  border-radius: 10em;
-  color: #203a43;
+  background-color: transparent;
+  color: #ced4da;
+  box-shadow: 2rem 0 3rem -2rem #000;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.btn:after {
-  content: "";
-  display: block;
-  width: 0%;
-  padding-top: 5px;
-  border-bottom: 1px solid #ced4da;
-  transition: 0.5s;
-}
-.btn:hover:after,
-.btn:focus:after {
-  width: 100%;
+
+.btn-entry {
+  width: auto;
+  margin-right: 5%;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: transparent;
+  color: #ced4da;
+  box-shadow: 2rem 0 3rem -2rem #000;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

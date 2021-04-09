@@ -1,14 +1,11 @@
-.entry {
-  padding: 3rem 2rem 3rem 2rem;
-  margin: 0;
-  overflow-x: hidden;
-  position: relative;
-  box-shadow: -2rem 0 3rem -2rem #000;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.entry-list section {
+  padding: 0;
 }
 
 .entry {
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
   display: flex;
   margin-bottom: 10%;
   transition: all 0.4s ease-in-out;
@@ -18,9 +15,14 @@
 .entry:hover {
   transform: scale(1.04);
 }
+
 .entry-buttons {
   display: flex;
 }
+.toggle-buttons {
+  flex-grow: 2;
+}
+
 .rounded-input {
   width: 100%;
   padding: 10px;
@@ -29,16 +31,25 @@
 }
 
 .active-button {
-  background: linear-gradient(180deg, #a79ee5 0, #2d227c);
+  background-image: linear-gradient(-45deg, #b3bfc6 0%, #ced4da 100%);
+  color: #203a43;
+  width: auto;
+  margin-right: 5%;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 2rem 0 3rem -2rem #000;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .entry-info {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  padding: 1.5rem;
-  color: #fff;
+  font-size: calc(1rem + 2vw);
+  padding: 1.2rem;
+  color: #ced4da;
   margin: 0;
 
   backdrop-filter: blur(15px);
@@ -54,6 +65,15 @@
 .entry-notes {
   justify-content: space-evenly;
 }
+
+.entry-date {
+  flex-grow: 2;
+}
+
 .entry-tech {
   justify-content: center;
+}
+
+.entry-notes {
+  font-size: 75%;
 }
