@@ -116,7 +116,7 @@ export default class NewEntry extends Component {
               <div className="mood-date">
                 <div className="new-entry-form-date">{this.state.date}</div>
                 <div>
-                  <p>I feel: </p>
+                  <p>I felt: </p>
                   <div className="mood-buttons">
                     <button
                       onClick={(e) => this.updateMood(e.currentTarget.id)}

@@ -59,7 +59,7 @@ form p {
 
 .profile-list {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   list-style-type: none;
 }
 

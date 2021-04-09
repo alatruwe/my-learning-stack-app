@@ -77,6 +77,7 @@ p {
   line-height: 1.5;
   padding: 3% 0;
   text-align: justify;
+  font-size: calc(1rem + 2vw);
 }
 
 .entry-list ul {
