@@ -137,4 +137,5 @@ p {
   box-shadow: 2rem 0 3rem -2rem #000;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.5s ease-in-out;
 }
