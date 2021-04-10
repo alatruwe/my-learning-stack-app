@@ -6,11 +6,25 @@ what you've learned, what you've struggled with,
 and keep track of all your progress!
 
 ## Screenshots
-(to be added soon)
+
+
+**Enter a new note**
+![new-entry-view](screenshots/new-entry-view.png)
+
+**View all your entries in your dashboard**
+![dashboard](screenshots/dashboard-view.png)
+
+
+**View the details and/or delete your note**
+![entry-view](screenshots/entry-view.png)
+
+**Update your profile**
+![profile-view](screenshots/profile-view.png)
 
 
 ## Features to come:
-(to be added soon)
+* GitHub like graph to better visualize your entries
+* Setting-up reminders 
 
 ## Built with
 * React
