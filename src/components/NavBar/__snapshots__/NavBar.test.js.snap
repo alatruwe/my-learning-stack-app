@@ -17,13 +17,10 @@ exports[`NavBar component renders the component by default 1`] = `
       className="logo"
     >
       <Link
-        className="nav-links"
+        className="nav-links-logo"
         to="/"
       >
-        <i
-          className="fas fa-layer-group"
-        />
-        My Learning Stack
+        { My Learning Stack }
       </Link>
     </div>
     <div

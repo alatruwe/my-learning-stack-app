@@ -1,37 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingPage component renders the UI as expected 1`] = `
-<div>
-  <header
-    className="wrapper"
+<div
+  className="wrapper"
+>
+  <section
+    className="card"
   >
     <h2
-      className="text-intro"
+      className="landing-page-title"
     >
       Elevate Your Learning
     </h2>
-  </header>
-   
-  <section
-    className="wrapper"
-  >
-    <h3>
+    <p
+      className="card-text"
+    >
       Keep track of your progress
-    </h3>
-  </section>
-  <section
-    className="wrapper"
-  >
-    <h3>
+    </p>
+    <p
+      className="card-text"
+    >
       Identify your struggles
-    </h3>
-  </section>
-  <section
-    className="wrapper"
-  >
-    <h3>
+    </p>
+    <p
+      className="card-text"
+    >
       Celebrate your successes
-    </h3>
+    </p>
   </section>
 </div>
 `;

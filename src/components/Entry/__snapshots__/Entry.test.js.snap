@@ -2,49 +2,32 @@
 
 exports[`Entry component renders the component by default 1`] = `
 <section
-  className="entry"
+  className="card entry"
 >
-  <div
-    className="vertical-border"
-  />
   <div
     className="entry-info"
   >
     <div
+      className="entry-title"
       onClick={[Function]}
     >
       <div
         className="entry-date-mood"
       >
-        <div />
-        <div />
+        <div
+          className="entry-date"
+        />
       </div>
       <div
         className="entry-tech"
       >
-        <p />
+        <p
+          className="tech-text"
+        />
          
       </div>
     </div>
-    <div
-      className="entry-buttons"
-    >
-      <button
-        onClick={[Function]}
-        type="button"
-      >
-        I learned
-      </button>
-      <button
-        onClick={[Function]}
-        type="button"
-      >
-        I struggled
-      </button>
-    </div>
-    <div
-      className="entry-notes"
-    />
+    <div />
   </div>
 </section>
 `;

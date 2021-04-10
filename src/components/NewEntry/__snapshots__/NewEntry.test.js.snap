@@ -1,150 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewEntry component renders the UI as expected 1`] = `
-<section
+<div
   className="wrapper"
 >
-  <h1
-    className="form-title"
+  <section
+    className="card"
   >
-    <span>
-      New Entry
-    </span>
-  </h1>
-  <div
-    className="form"
-  >
-    <form
-      className="form-details"
-      onSubmit={[Function]}
+    <h2
+      className="card-title"
     >
-      <div
-        className="mood-date"
+      New Entry
+    </h2>
+    <div
+      className="form"
+    >
+      <form
+        className="form-details"
+        onSubmit={[Function]}
       >
-        <div>
-          <p>
-            I feel: 
-          </p>
-          <button
-            className="btn"
-            id="smile"
-            onClick={[Function]}
-            type="button"
-          >
-            <i
-              className="far fa-smile"
-            />
-          </button>
-          <button
-            className="btn"
-            id="meh"
-            onClick={[Function]}
-            type="button"
-          >
-            <i
-              className="far fa-meh"
-            />
-          </button>
-          <button
-            className="btn"
-            id="frown"
-            onClick={[Function]}
-            type="button"
-          >
-            <i
-              className="far fa-frown"
-            />
-          </button>
-        </div>
-        <div>
-          4-1-2021
-        </div>
-      </div>
-      <div
-        className="tech-button"
-      >
-        <p>
-          I focused on:
-        </p>
-        <button
-          className="btn"
-          id="react"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="fab fa-react"
-          >
-            React
-          </i>
-        </button>
-        <button
-          className="btn"
-          id="javascript"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="fab fa-js"
-          >
-            Javascript
-          </i>
-        </button>
-        <button
-          className="btn"
-          id="node.js"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="fab fa-node-js"
-          >
-            Node.js
-          </i>
-        </button>
-      </div>
-      <div
-        className="notes"
-      >
-        <p>
-          Notes:
-        </p>
-        <textarea
-          className="rounded-input"
-          id="learning_notes"
-          name="learning_notes"
-          onChange={[Function]}
-          placeholder="I learned..."
-          rows="5"
-          value=""
-        />
-        <textarea
-          className="rounded-input"
-          id="struggling_notes"
-          name="struggling_notes"
-          onChange={[Function]}
-          placeholder="I struggled with..."
-          rows="5"
-          value=""
-        />
-      </div>
-      <div
-        className="form-btn"
-      >
-        <button
-          className="btn"
-          disabled="Please enter at least your mood and your focus"
-          type="submit"
-        >
-          Add entry
-        </button>
         <div
-          className="error"
+          className="mood-date"
         >
-          Please enter at least your mood and your focus
+          <div
+            className="new-entry-form-date"
+          >
+            4-10-2021
+          </div>
+          <div>
+            <p
+              className="new-entry-text"
+            >
+              I felt: 
+            </p>
+            <div
+              className="mood-buttons"
+            >
+              <button
+                className="btn"
+                id="smile"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="far fa-smile"
+                />
+              </button>
+              <button
+                className="btn"
+                id="meh"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="far fa-meh"
+                />
+              </button>
+              <button
+                className="btn"
+                id="frown"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="far fa-frown"
+                />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
-</section>
+        <div
+          className="tech-buttons"
+        >
+          <p
+            className="new-entry-text"
+          >
+            I focused on:
+          </p>
+          <ul
+            className="profile-list"
+          />
+        </div>
+        <div
+          className="notes"
+        >
+          <p
+            className="new-entry-text"
+          >
+            Notes:
+          </p>
+          <textarea
+            className="rounded-input"
+            id="learning_notes"
+            name="learning_notes"
+            onChange={[Function]}
+            placeholder="I learned..."
+            rows="5"
+            value=""
+          />
+          <textarea
+            className="rounded-input"
+            id="struggling_notes"
+            name="struggling_notes"
+            onChange={[Function]}
+            placeholder="I struggled with..."
+            rows="5"
+            value=""
+          />
+        </div>
+        <div
+          className="form-btn"
+        >
+          <button
+            className="btn"
+            disabled="Please enter at least your mood and your focus"
+            type="submit"
+          >
+            Add entry
+          </button>
+          <div
+            className="error"
+          >
+            Please enter at least your mood and your focus
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
 `;
