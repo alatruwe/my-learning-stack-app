@@ -23,8 +23,10 @@ and keep track of all your progress!
 
 
 ## Features to come:
-* GitHub like graph to better visualize your entries
+* GitHub-like graph to better visualize your entries
 * Setting-up reminders 
+* Possibility to add more notes categories (like feedback)
+
 
 ## Built with
 * React
