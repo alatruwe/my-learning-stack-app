@@ -5,7 +5,7 @@ class LandingPage extends Component {
     return (
       <div className="wrapper">
         <section className="card">
-          <h2 className="card-title">Elevate Your Learning</h2>
+          <h2 className="landing-page-title">Elevate Your Learning</h2>
           <p className="card-text">Keep track of your progress</p>
 
           <p className="card-text">Identify your struggles</p>

@@ -93,7 +93,7 @@ class Login extends Component {
           <h2 className="form-title">Log In</h2>
           <div className="form">
             <form className="form-details" onSubmit={this.handleSubmit}>
-              <div>
+              <div className="form-input">
                 <input
                   type="text"
                   name="email"
@@ -106,7 +106,7 @@ class Login extends Component {
                   <ValidationError message={emailError} />
                 )}
               </div>
-              <div>
+              <div className="form-input">
                 <input
                   type="password"
                   name="password"

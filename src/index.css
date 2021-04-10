@@ -52,6 +52,7 @@ body {
 .form-title {
   font-size: calc(7vw + 5px);
   padding-bottom: 20%;
+  text-align: center;
 }
 
 .card-text {
@@ -86,9 +87,7 @@ p {
 .form {
   display: flex;
 }
-.form-title {
-  text-align: center;
-}
+
 .form-details {
   display: flex;
   flex-direction: column;
@@ -133,4 +132,77 @@ p {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: all 0.5s ease-in-out;
+}
+
+.demo {
+  font-size: calc(1rem + 1vw);
+  text-align: left;
+}
+
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    padding-top: 13%;
+    width: 55%;
+  }
+
+  .dashboard-wrapper {
+    width: 90%;
+  }
+
+  /* card and form styling */
+  .card {
+    padding: 10% 10% 10% 10%;
+  }
+  h1 {
+    font-size: calc(3vw + 3px);
+    margin: 10px 0px;
+    padding-top: 20px;
+  }
+  p {
+    font-size: calc(1rem + 1vw);
+  }
+  .landing-page-title {
+    font-size: calc(3vw + 5px);
+    padding-bottom: 5%;
+    text-align: left;
+  }
+  .form-title {
+    display: none;
+  }
+  .card-title {
+    font-size: calc(3vw + 5px);
+    padding-bottom: 5%;
+  }
+  .card-text {
+    font-size: calc(2vw + 5px);
+    padding-bottom: 0%;
+  }
+  .form {
+    margin: auto;
+    justify-content: center;
+  }
+
+  .form-input {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rounded-input {
+    font-size: 1rem;
+    width: 85%;
+  }
+  .btn {
+    font-size: calc(1rem + 1vw);
+  }
+
+  /* dashboard */
+  .entry {
+    margin-bottom: 2%;
+  }
+
+  .btn-entry,
+  .active-button {
+    font-size: calc(2vw + 2px);
+  }
 }

@@ -66,3 +66,29 @@ form p {
 .form-btn button {
   margin-bottom: 10%;
 }
+
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+  .mood-date {
+    margin: 0;
+  }
+  .mood-buttons {
+    padding: 0;
+  }
+  .new-entry-form-date {
+    padding-bottom: 0%;
+    font-size: calc(1rem + 1vw);
+  }
+  .new-entry-text {
+    font-size: calc(1rem + 1vw);
+    padding-bottom: 2%;
+  }
+  .tech-buttons {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 0;
+  }
+  .tech-button {
+    margin: 2% 2%;
+  }
+}

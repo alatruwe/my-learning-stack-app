@@ -107,7 +107,7 @@ class Entry extends React.Component {
               <>{Mood.renderMood(this.props.mood)}</>
             </div>
             <div className="entry-tech">
-              <p>{this.props.tech}</p>{" "}
+              <p className="tech-text">{this.props.tech}</p>{" "}
             </div>
           </div>
           <div>{this.state.showDetails ? this.renderDetails() : <></>}</div>

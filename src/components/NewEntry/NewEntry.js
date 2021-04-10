@@ -108,15 +108,13 @@ export default class NewEntry extends Component {
     return (
       <div className="wrapper">
         <section className="card">
-          <h1 className="form-title">
-            <span>New Entry</span>
-          </h1>
+          <h2 className="card-title">New Entry</h2>
           <div className="form">
             <form className="form-details" onSubmit={this.handleSubmit}>
               <div className="mood-date">
                 <div className="new-entry-form-date">{this.state.date}</div>
                 <div>
-                  <p>I felt: </p>
+                  <p className="new-entry-text">I felt: </p>
                   <div className="mood-buttons">
                     <button
                       onClick={(e) => this.updateMood(e.currentTarget.id)}
@@ -152,7 +150,7 @@ export default class NewEntry extends Component {
                 </div>
               </div>
               <div className="tech-buttons">
-                <p>I focused on:</p>
+                <p className="new-entry-text">I focused on:</p>
                 <ul className="profile-list">
                   {techs.map((tech) => (
                     <li
@@ -173,7 +171,7 @@ export default class NewEntry extends Component {
                 </ul>
               </div>
               <div className="notes">
-                <p>Notes:</p>
+                <p className="new-entry-text">Notes:</p>
                 <textarea
                   id="learning_notes"
                   name="learning_notes"

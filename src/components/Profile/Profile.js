@@ -96,9 +96,7 @@ class Profile extends Component {
     return (
       <div className="wrapper">
         <section className="card">
-          <h1 className="form-title">
-            <span>My Profile</span>
-          </h1>
+          <h2 className="card-title">Profile</h2>
 
           <div>
             <p>I work with:</p>

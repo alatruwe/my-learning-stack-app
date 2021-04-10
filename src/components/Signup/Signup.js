@@ -131,15 +131,13 @@ class Signup extends Component {
     return (
       <div className="wrapper">
         <section className="card">
-          <h1 className="form-title">
-            <span>Sign Up</span>
-          </h1>
+          <h2 className="form-title">Sign up</h2>
           <div className="form">
             <form
               className="form-details"
               onSubmit={(e) => this.handleSubmit(e)}
             >
-              <div>
+              <div className="form-input">
                 <input
                   type="text"
                   name="firstName"
@@ -152,7 +150,7 @@ class Signup extends Component {
                   <ValidationError message={firstNameError} />
                 )}
               </div>
-              <div>
+              <div className="form-input">
                 <input
                   type="text"
                   name="lastName"
@@ -165,7 +163,7 @@ class Signup extends Component {
                   <ValidationError message={lastNameError} />
                 )}
               </div>
-              <div>
+              <div className="form-input">
                 <input
                   type="email"
                   name="email"
@@ -178,7 +176,7 @@ class Signup extends Component {
                   <ValidationError message={emailError} />
                 )}
               </div>
-              <div>
+              <div className="form-input">
                 <input
                   type="password"
                   name="password"
@@ -192,7 +190,7 @@ class Signup extends Component {
                   <ValidationError message={passwordError} />
                 )}
               </div>
-              <div>
+              <div className="form-input">
                 <input
                   type="password"
                   name="repeatPassword"

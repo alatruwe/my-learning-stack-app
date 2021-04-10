@@ -70,3 +70,13 @@
 .entry-notes {
   font-size: 75%;
 }
+
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+  .tech-text {
+    padding: 0;
+  }
+  .entry-date-mood {
+    font-size: calc(1rem + 1vw);
+  }
+}
