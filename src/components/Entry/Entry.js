@@ -39,27 +39,35 @@ class Entry extends React.Component {
     return (
       <>
         <div className="entry-buttons">
-          <button
-            type="button"
-            onClick={this.showLearningNotes}
-            className={this.state.showLearningNotes ? "active-button" : ""}
-          >
-            I learned
-          </button>
-          <button
-            type="button"
-            className={this.state.showStrugglingNotes ? "active-button" : ""}
-            onClick={this.showStrugglingNotes}
-          >
-            I struggled
-          </button>
-          <button
-            className="btn"
-            type="button"
-            onClick={this.handleDeleteEntry}
-          >
-            Delete
-          </button>
+          <div className="toggle-buttons">
+            <button
+              type="button"
+              onClick={this.showLearningNotes}
+              className={
+                this.state.showLearningNotes ? "active-button" : "btn-entry"
+              }
+            >
+              I learned
+            </button>
+            <button
+              type="button"
+              className={
+                this.state.showStrugglingNotes ? "active-button" : "btn-entry"
+              }
+              onClick={this.showStrugglingNotes}
+            >
+              I struggled
+            </button>
+          </div>
+          <div>
+            <button
+              className="btn-entry"
+              type="button"
+              onClick={this.handleDeleteEntry}
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
         </div>
         <div className="entry-notes">
           {this.state.showLearningNotes ? this.renderLearningNotes() : <></>}
@@ -91,16 +99,15 @@ class Entry extends React.Component {
 
   render() {
     return (
-      <section className="entry">
-        <div className="vertical-border"></div>
+      <section className="card entry">
         <div className="entry-info">
-          <div onClick={this.showDetails}>
+          <div className="entry-title" onClick={this.showDetails}>
             <div className="entry-date-mood">
-              <div>{this.props.date}</div>
-              <div>{Mood.renderMood(this.props.mood)}</div>
+              <div className="entry-date">{this.props.date}</div>
+              <>{Mood.renderMood(this.props.mood)}</>
             </div>
             <div className="entry-tech">
-              <p>{this.props.tech}</p>{" "}
+              <p className="tech-text">{this.props.tech}</p>{" "}
             </div>
           </div>
           <div>{this.state.showDetails ? this.renderDetails() : <></>}</div>

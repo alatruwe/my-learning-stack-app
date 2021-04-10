@@ -88,52 +88,52 @@ class Login extends Component {
     const passwordError = this.validatePassword();
 
     return (
-      <section className="wrapper">
-        <h1 className="form-title">
-          <span>Log In</span>
-        </h1>
-        <div className="form">
-          <form className="form-details" onSubmit={this.handleSubmit}>
-            <div>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Email"
-                className="rounded-input"
-                onChange={(e) => this.updateEmail(e.target.value)}
-              />
-              {this.state.email.touched && (
-                <ValidationError message={emailError} />
-              )}
-            </div>
-            <div>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                className="rounded-input"
-                onChange={(e) => this.updatePassword(e.target.value)}
-              />
-              {this.state.password.touched && (
-                <ValidationError message={passwordError} />
-              )}
-            </div>
+      <div className="wrapper">
+        <section className="card">
+          <h2 className="form-title">Log In</h2>
+          <div className="form">
+            <form className="form-details" onSubmit={this.handleSubmit}>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="rounded-input"
+                  onChange={(e) => this.updateEmail(e.target.value)}
+                />
+                {this.state.email.touched && (
+                  <ValidationError message={emailError} />
+                )}
+              </div>
+              <div className="form-input">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  className="rounded-input"
+                  onChange={(e) => this.updatePassword(e.target.value)}
+                />
+                {this.state.password.touched && (
+                  <ValidationError message={passwordError} />
+                )}
+              </div>
 
-            <div className="form-btn">
-              <button
-                type="submit"
-                className="btn"
-                disabled={this.validateEmail() || this.validatePassword()}
-              >
-                Log In
-              </button>
-            </div>
-            {this.props.location.demo ? this.renderDemo() : <></>}
-          </form>
-        </div>
-      </section>
+              <div className="form-btn">
+                <button
+                  type="submit"
+                  className="btn"
+                  disabled={this.validateEmail() || this.validatePassword()}
+                >
+                  Log In
+                </button>
+              </div>
+              {this.props.location.demo ? this.renderDemo() : <></>}
+            </form>
+          </div>
+        </section>
+      </div>
     );
   }
 }

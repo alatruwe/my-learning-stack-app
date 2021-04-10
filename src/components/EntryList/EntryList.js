@@ -35,13 +35,14 @@ export default class EntryList extends React.Component {
   render() {
     const entries = this.state.entries;
     return (
-      <section className="wrapper">
+      <section className="wrapper dashboard-wrapper">
+        <h2 className="card-title">Dashboard</h2>
         <ul className="entry-list">
           {entries.map((entry) => (
             <li key={entry.id}>
               <Entry
                 handleDeleteEntry={this.handleDeleteEntry}
-                date={format(parseISO(entry.date), "L-d- yyyy")}
+                date={format(parseISO(entry.date), "L-d- yy")}
                 mood={entry.current_mood}
                 id={entry.id}
                 tech={entry.name}

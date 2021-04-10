@@ -1,0 +1,12 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+  .profile-form {
+    margin-top: 2%;
+  }
+}

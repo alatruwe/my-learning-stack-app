@@ -1,13 +1,20 @@
 .navbar {
-  font-size: calc(5vw + 5px);
+  font-size: calc(4vw + 5px);
+  position: absolute;
+  right: 22px;
+  width: 100%;
+  display: flex;
 }
 .nav-links,
+.nav-links-logo,
 .logo {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+  color: #ced4da;
 }
-.nav-links:visited {
-  color: black;
+
+.nav-links {
+  padding-right: 5%;
 }
 
 .main-nav {
@@ -18,7 +25,6 @@
 }
 .logo {
   display: inline-block;
-  font-size: 22px;
   margin-top: 10px;
   margin-left: 50px;
   font-size: calc(1rem + 2vw);
@@ -33,9 +39,15 @@
 }
 
 .active {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
   line-height: 35px;
+  position: absolute;
+  right: 22px;
+  top: 48px;
+  padding-left: 20%;
 }
 
 ul {
@@ -47,8 +59,8 @@ ul {
   .navbar {
     display: flex;
     justify-content: space-between;
+    right: 0px;
     padding: 20px;
-    height: 70px;
     align-items: center;
   }
   .main-nav,
@@ -60,11 +72,16 @@ ul {
   }
 
   .nav-links {
-    margin: 40px;
+    margin: 40px 25px 40px 40px;
     font-size: calc(1rem + 0.7vw);
   }
   .logo {
-    margin-top: 0;
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+    display: flex;
+    flex-grow: 2;
+    font-size: calc(1rem + 1vw);
   }
   .navbar-toggle {
     display: none;

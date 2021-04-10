@@ -7,7 +7,9 @@ class Tech extends React.Component {
   render() {
     return (
       <button
-        onClick={(e) => this.props.updateTech(this.props.tech)}
+        onClick={(e) => {
+          this.props.updateTech(this.props.tech);
+        }}
         type="button"
         className="btn"
       >

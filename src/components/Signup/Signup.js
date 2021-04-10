@@ -129,97 +129,100 @@ class Signup extends Component {
     const repeatPasswordError = this.validateRepeatPassword();
 
     return (
-      <section className="wrapper">
-        <h1 className="form-title">
-          <span>Sign Up</span>
-        </h1>
-        <div className="form">
-          <form className="form-details" onSubmit={(e) => this.handleSubmit(e)}>
-            <div>
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                placeholder="First name"
-                className="rounded-input"
-                onChange={(e) => this.updateFirstName(e.target.value)}
-              />
-              {this.state.firstName.touched && (
-                <ValidationError message={firstNameError} />
-              )}
-            </div>
-            <div>
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                placeholder="Last name"
-                className="rounded-input"
-                onChange={(e) => this.updateLastName(e.target.value)}
-              />
-              {this.state.lastName.touched && (
-                <ValidationError message={lastNameError} />
-              )}
-            </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                className="rounded-input"
-                onChange={(e) => this.updateEmail(e.target.value)}
-              />
-              {this.state.email.touched && (
-                <ValidationError message={emailError} />
-              )}
-            </div>
-            <div>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                className="rounded-input"
-                onChange={(e) => this.updatePassword(e.target.value)}
-              />
+      <div className="wrapper">
+        <section className="card">
+          <h2 className="form-title">Sign up</h2>
+          <div className="form">
+            <form
+              className="form-details"
+              onSubmit={(e) => this.handleSubmit(e)}
+            >
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First name"
+                  className="rounded-input"
+                  onChange={(e) => this.updateFirstName(e.target.value)}
+                />
+                {this.state.firstName.touched && (
+                  <ValidationError message={firstNameError} />
+                )}
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last name"
+                  className="rounded-input"
+                  onChange={(e) => this.updateLastName(e.target.value)}
+                />
+                {this.state.lastName.touched && (
+                  <ValidationError message={lastNameError} />
+                )}
+              </div>
+              <div className="form-input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="rounded-input"
+                  onChange={(e) => this.updateEmail(e.target.value)}
+                />
+                {this.state.email.touched && (
+                  <ValidationError message={emailError} />
+                )}
+              </div>
+              <div className="form-input">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  className="rounded-input"
+                  onChange={(e) => this.updatePassword(e.target.value)}
+                />
 
-              {this.state.password.touched && (
-                <ValidationError message={passwordError} />
-              )}
-            </div>
-            <div>
-              <input
-                type="password"
-                name="repeatPassword"
-                id="repeatPassword"
-                placeholder="Repeat passord"
-                className="rounded-input"
-                onChange={(e) => this.updateRepeatPassword(e.target.value)}
-              />
-              {this.state.repeatPassword.touched && (
-                <ValidationError message={repeatPasswordError} />
-              )}
-            </div>
+                {this.state.password.touched && (
+                  <ValidationError message={passwordError} />
+                )}
+              </div>
+              <div className="form-input">
+                <input
+                  type="password"
+                  name="repeatPassword"
+                  id="repeatPassword"
+                  placeholder="Repeat password"
+                  className="rounded-input"
+                  onChange={(e) => this.updateRepeatPassword(e.target.value)}
+                />
+                {this.state.repeatPassword.touched && (
+                  <ValidationError message={repeatPasswordError} />
+                )}
+              </div>
 
-            <div className="form-btn">
-              <button
-                type="submit"
-                className="btn"
-                disabled={
-                  this.validateFirstName() ||
-                  this.validateLastName() ||
-                  this.validateEmail() ||
-                  this.validatePassword() ||
-                  this.validateRepeatPassword()
-                }
-              >
-                Sign Up!
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+              <div className="form-btn">
+                <button
+                  type="submit"
+                  className="btn"
+                  disabled={
+                    this.validateFirstName() ||
+                    this.validateLastName() ||
+                    this.validateEmail() ||
+                    this.validatePassword() ||
+                    this.validateRepeatPassword()
+                  }
+                >
+                  Sign Up!
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
     );
   }
 }

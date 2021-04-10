@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import Tech from "../Tech/Tech";
 import ProfileApiService from "../../services/profile-api-services";
 import ValidationError from "../ValidationError/ValidationError.js";
+import "./Profile.css";
 
 class Profile extends Component {
   constructor(props) {
@@ -93,64 +94,64 @@ class Profile extends Component {
     const techs = this.state.techs;
     const techError = this.validateTech();
     return (
-      <section className="wrapper">
-        <h1 className="form-title">
-          <span>My Profile</span>
-        </h1>
+      <div className="wrapper">
+        <section className="card">
+          <h2 className="card-title">Profile</h2>
 
-        <div>
-          <p>I work with:</p>
-          <ul className="profile-list">
-            {techs.map((tech) => (
-              <li key={tech.id}>
-                <Tech id={tech.name} tech={tech.name} />
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="form">
-          <p>Update:</p>
-          <form className="form-details" onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              id="tech1"
-              name="tech1"
-              placeholder="React"
-              className="rounded-input"
-              value={this.state.tech1}
-              onChange={(e) => this.updateTech1(e.target.value)}
-            />
-            <input
-              type="text"
-              id="tech2"
-              name="tech2"
-              placeholder="Javascript"
-              className="rounded-input"
-              value={this.state.tech2}
-              onChange={(e) => this.updateTech2(e.target.value)}
-            />
-            <input
-              type="text"
-              id="tech3"
-              name="tech3"
-              placeholder="Node.js"
-              className="rounded-input"
-              value={this.state.tech3}
-              onChange={(e) => this.updateTech3(e.target.value)}
-            />
-            {this.validateTech && <ValidationError message={techError} />}
-            <div className="form-btn">
-              <button
-                type="submit"
-                className="btn"
-                disabled={this.validateTech()}
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+          <div>
+            <p>I work with:</p>
+            <ul className="profile-list">
+              {techs.map((tech) => (
+                <li key={tech.id} className="tech-button">
+                  <Tech id={tech.name} tech={tech.name} />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="profile-form">
+            <p>Update:</p>
+            <form className="form-details" onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                id="tech1"
+                name="tech1"
+                placeholder="React"
+                className="rounded-input"
+                value={this.state.tech1}
+                onChange={(e) => this.updateTech1(e.target.value)}
+              />
+              <input
+                type="text"
+                id="tech2"
+                name="tech2"
+                placeholder="Javascript"
+                className="rounded-input"
+                value={this.state.tech2}
+                onChange={(e) => this.updateTech2(e.target.value)}
+              />
+              <input
+                type="text"
+                id="tech3"
+                name="tech3"
+                placeholder="Node.js"
+                className="rounded-input"
+                value={this.state.tech3}
+                onChange={(e) => this.updateTech3(e.target.value)}
+              />
+              {this.validateTech && <ValidationError message={techError} />}
+              <div className="form-btn">
+                <button
+                  type="submit"
+                  className="btn"
+                  disabled={this.validateTech()}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
     );
   }
 }
