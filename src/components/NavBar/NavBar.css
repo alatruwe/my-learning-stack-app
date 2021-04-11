@@ -78,7 +78,7 @@ ul {
   .logo {
     margin: 0;
     padding-left: 5%;
-    padding-top: 5%;
+
     display: flex;
     flex-grow: 2;
     font-size: calc(1rem + 1vw);

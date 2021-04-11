@@ -49,6 +49,7 @@ body {
 }
 
 .card-title,
+.landing-page-title,
 .form-title {
   font-size: calc(7vw + 5px);
   padding-bottom: 20%;
