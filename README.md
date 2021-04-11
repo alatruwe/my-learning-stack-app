@@ -35,4 +35,4 @@ and keep track of all your progress!
 * HTML
 
 ## Live App
-https://my-learning-stack-app.vercel.app/
+- [Click here](https://my-learning-stack-app.vercel.app/)
